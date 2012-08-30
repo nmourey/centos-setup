@@ -1,0 +1,4 @@
+The files in this directory need to be
+placed in /var/named/chroot/
+They need to be edited for your site
+before you can make use of them.

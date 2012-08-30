@@ -1,0 +1,11 @@
+$TTL 3D
+0.168.192.in-addr.arpa.      IN      SOA     ns1.example.com. YOUR-USERNAME.example.com. (
+					2012041301	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+;
+
+	IN	NS      ns1.example.com.
+1	IN	PTR	router.example.com.		; IP Address of DNS Server.

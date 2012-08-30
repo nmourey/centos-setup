@@ -1,0 +1,81 @@
+CentOS Setup Tools is for initial configuration of CentOS 6
+Copyright © 2012 Nathan A. Mourey II <nmoureyii@ne.rr.com>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-------------------------------------------------------------------------------
+
+THIS IS BETA SOTFWARE : Becareful!
+
+NOTICE: The setup.sh script is not meant to be run from a network connction.
+
+You will need to run the setup program provided with CentOS to configure the 
+firewall and other services that are not configured with the centos setup
+tools.
+
+Also, you will have to configure the MySQL server passwords by hand when done.
+You may want to check out my DB-Tools for managing MySQL user accounts.
+
+
+If you have a Minimal Server install you will need to insert the USB stick and
+run dmesg.  You will be shown what device it is, ie, /dev/sdd.  Next you need
+to do the following (If anyone knows why please email me):
+
+
+fdisk /dev/[device provided by dmesg] 
+press p
+press q
+
+get the partition provided by fdisk. ie, /dev/sdd1
+
+you can now mount like this:
+
+mkdir /media/usb
+mount -t vfat /dev/sdd1 /media/usb
+
+Next:
+
+cd /root
+tar xf /media/usb/centos-setup-tools.tar.bz2
+
+
+Suggesting install is to put the archive on a usb stick and untar it to /root/
+
+Follow the instructions provided in the scripts. They should be run in the
+following order.
+
+run: setup.sh - Configures Networking
+run: update.sh - Installs updates
+run: install_pkgs.sh - Installs common server software.
+run: setup_services.sh - Setup of common server software.
+run: enable_quotas.sh - Edits /etc/fstab and enables filesystem quotas
+
+Before running the following script add a quota user to use as a prototype.
+
+run: assign_quotas.sh - Turns on user quotas.  
+
+Once the scripts are done you will find some example DNS files under /root/bind
+they can be used as a starting point.  You will still need to learn how to install
+them and set the correct permissions, ownerships and selinux contexts.
+[ This may come some time in the future. ]
+
+
+NOTE: Once you have configured your server and have added all accounts it is
+suggested that you run the assign_quotas.sh script to set quotas for your 
+accounts.
+
+
+Please feel free to send patchs or comments.
+	Have Fun!!
+
