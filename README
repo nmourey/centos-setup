@@ -20,6 +20,26 @@ THIS IS BETA SOTFWARE : Becareful!
 
 NOTICE: The setup.sh script is not meant to be run from a network connction.
 
+Follow the instructions provided in the scripts. They should be run in the
+following order.
+
+1. setup.sh - Configures Networking
+2. update.sh - Installs updates
+3. install_pkgs.sh - Installs common server software.
+4. setup_services.sh - Setup of common server software.
+5. enable_quotas.sh - Edits /etc/fstab and enables filesystem quotas
+
+
+-------------------------------------------------------------------------------
+
+If you run the setup.sh script and have a static IP Address be sure to 
+know the following information:
+
+NETWORK NETMASK IPADDR DNS1 DNS2 GATEWAY
+
+
+-------------------------------------------------------------------------------
+
 You will need to run the setup program provided with CentOS to configure the 
 firewall and other services that are not configured with the centos setup
 tools.
@@ -51,15 +71,6 @@ tar xf /media/usb/centos-setup-tools.tar.bz2
 
 
 Suggesting install is to put the archive on a usb stick and untar it to /root/
-
-Follow the instructions provided in the scripts. They should be run in the
-following order.
-
-run: setup.sh - Configures Networking
-run: update.sh - Installs updates
-run: install_pkgs.sh - Installs common server software.
-run: setup_services.sh - Setup of common server software.
-run: enable_quotas.sh - Edits /etc/fstab and enables filesystem quotas
 
 Before running the following script add a quota user to use as a prototype.
 
