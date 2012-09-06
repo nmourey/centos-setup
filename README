@@ -26,8 +26,8 @@ following order.
 1. setup.sh - Configures Networking
 2. update.sh - Installs updates
 3. install_pkgs.sh - Installs common server software.
-4. setup_services.sh - Setup of common server software.
-5. enable_quotas.sh - Edits /etc/fstab and enables filesystem quotas
+4. enable_quotas.sh - Edits /etc/fstab and enables filesystem quotas
+5. setup_services.sh - Setup of common server software.
 
 
 -------------------------------------------------------------------------------
