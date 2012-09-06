@@ -1,0 +1,5 @@
+
+## configure kvm and associated tools.
+
+
+setsebool -P virt_use_nfs 1

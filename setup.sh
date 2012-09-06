@@ -46,3 +46,5 @@ echo "Connected to network."
 $ICFG
 
 echo "Now run update.sh"
+
+fi
