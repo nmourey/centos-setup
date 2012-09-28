@@ -1,4 +1,4 @@
-CentOS Setup Tools is for initial configuration of CentOS 6
+CentOS Setup Tools is for initial configuration of CentOS 6.x
 Copyright © 2012 Nathan A. Mourey II <nmoureyii@ne.rr.com>
 
 This program is free software: you can redistribute it and/or modify
@@ -17,6 +17,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -------------------------------------------------------------------------------
 
 THIS IS BETA SOTFWARE : Becareful!
+
+DISCLAIMER: This project is not affiliated with or sponsored by the CentOS Project
+in any way.
 
 NOTICE: The setup.sh script is not meant to be run from a network connction.
 
