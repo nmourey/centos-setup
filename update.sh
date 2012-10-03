@@ -9,8 +9,8 @@ YUM=/usr/bin/yum
 
 echo "Mandatory install"
 echo "Please be patient... You can switch to another VT if desired."
-$YUM -y install centos-release-cr &>/dev/null
-$YUM -y install ftp &>/dev/null
+$YUM -y install centos-release-cr 
+$YUM -y install ftp 
 echo "This may take some time please be patient."
 $YUM -y update 
 echo "Done you can now run install_pkgs.sh"
