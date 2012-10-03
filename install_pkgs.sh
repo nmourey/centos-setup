@@ -54,7 +54,7 @@ read yes
 
 if [ $yes == "y" ]; then
 	echo "Please wait...."
-	$YUM -y install vsftpd &>/dev/null
+	$YUM -y install vsftpd 
 	echo "Installed FTP Server"
 fi
 
@@ -64,7 +64,7 @@ read yes
 
 if [ $yes == "y" ]; then
 	echo "Please wait...."
-	$YUM -y install php\* &>/dev/null
+	$YUM -y install php\* 
 	echo "Installed PHP Modules"
 fi
 
@@ -75,7 +75,7 @@ read yes
 
 if [ $yes == "y" ]; then
 	echo "Please wait...."
-	$YUM -y install perl-\* &>/dev/null
+	$YUM -y install perl-\* 
 	echo "Installed Perl Modules"
 fi
 
@@ -86,7 +86,7 @@ read yes
 
 if [ $yes == "y" ]; then
 	echo "Please wait...."
-	$YUM -y install samba &>/dev/null
+	$YUM -y install samba 
 	echo "Installed Samba"
 fi
 
@@ -97,12 +97,12 @@ read yes
 
 if [ $yes == "y" ]; then
 	echo "Please wait...."
-	$YUM -y install bind-chroot &>/dev/null
+	$YUM -y install bind-chroot 
 	echo "Installed BIND"
 	echo "Installing .example.com BIND files in /root/bind/."
 	echo "They must be configured for your domain and installed"
 	echo "in the correct place, typicaly /var/named/chroot/ "
-	$CP -vrf dist/named /root/bind &>/dev/null
+	$CP -vrf dist/named /root/bind 
 fi
 
 echo ""
@@ -112,7 +112,7 @@ read yes
 
 if [ $yes == "y" ]; then
 	echo "Please wait...."
-	$YUM -y install tomcat6-\* ant &>/dev/null
+	$YUM -y install tomcat6-\* ant 
 	echo "Installed Apache J2EE Tomcat"
 	echo "Installing symlink to enable ANT."
 	$LN -sf /usr/share/tomcat6/lib/catalina-ant.jar /usr/share/ant/lib
@@ -126,7 +126,7 @@ read yes
 if [ $yes == "y" ]; then
 	QUOTAS=yes
 	echo "Please wait...."
-	$YUM -y install quota &>/dev/null
+	$YUM -y install quota 
 	echo "Installed Quotas support." 
 fi
 
